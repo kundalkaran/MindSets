@@ -61,6 +61,26 @@
     },
    
     "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 24,
+            "extraMavenRepos": [
+              "../../node_modules/@notifee/react-native/android/libs"
+            ]
+          },
+          "ios": {
+            "deploymentTarget": "15.1",
+            "useFrameworks": "static",
+            "forceStaticLinking": [
+              "RNFBApp",
+              "RNFBMessaging",
+              "op-sqlite"
+            ]
+          }
+        }
+      ],
       "expo-router",
       [
         "@stream-io/video-react-native-sdk",
@@ -114,17 +134,6 @@
               "image": "./assets/images/splash-icon.png",
               "backgroundColor": "#0F1117"
             }
-          }
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "minSdkVersion": 24,
-            "extraMavenRepos": [
-              "../../node_modules/@notifee/react-native/android/libs"
-            ]
           }
         }
       ],
