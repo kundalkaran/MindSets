@@ -5,11 +5,8 @@ const path = require("path");
 /**
  * Expo config plugin to fix op-sqlite duplicate libsql.h header issue
  * when using useFrameworks: "static".
- *
- * Adds a post_install hook to the Podfile that removes duplicate
- * header references from the op-sqlite pod build phases.
  */
-function withOpSqliteFix(config) {
+function withIosBuildFixes(config) {
   return withDangerousMod(config, [
     "ios",
     async (config) => {
@@ -19,7 +16,7 @@ function withOpSqliteFix(config) {
       );
       let podfileContents = fs.readFileSync(podfilePath, "utf8");
 
-      const snippet = `
+      const postInstallSnippet = `
     # Fix op-sqlite duplicate libsql.h header issue
     installer.pods_project.targets.each do |target|
       if target.name == 'op-sqlite'
@@ -53,19 +50,16 @@ function withOpSqliteFix(config) {
       end
     end`;
 
-      // Insert before the last `end` in post_install, or append to post_install
       if (podfileContents.includes("post_install do |installer|")) {
-        // Add our fix right after post_install opening
         podfileContents = podfileContents.replace(
           "post_install do |installer|",
-          `post_install do |installer|${snippet}`
+          `post_install do |installer|${postInstallSnippet}`
         );
       } else {
-        // Add a new post_install block before the final `end`
         const lastEnd = podfileContents.lastIndexOf("end");
         podfileContents =
           podfileContents.slice(0, lastEnd) +
-          `\n  post_install do |installer|${snippet}\n  end\n` +
+          `\n  post_install do |installer|${postInstallSnippet}\n  end\n` +
           podfileContents.slice(lastEnd);
       }
 
@@ -75,4 +69,4 @@ function withOpSqliteFix(config) {
   ]);
 }
 
-module.exports = withOpSqliteFix;
+module.exports = withIosBuildFixes;
