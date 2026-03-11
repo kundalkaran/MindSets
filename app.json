@@ -170,7 +170,8 @@
           "iCloudContainerEnvironment": "Production"
         }
       ],
-      "expo-video"
+      "expo-video",
+      "./plugins/withOpSqliteFix"
     ],
     "experiments": {
       "typedRoutes": true
