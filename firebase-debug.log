@@ -1,0 +1,31 @@
+[debug] [2026-03-10T17:45:31.768Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-10T17:45:31.771Z] > authorizing via signed-in user (karankundal3535@gmail.com)
+[debug] [2026-03-10T17:45:31.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-10T17:45:31.772Z] > authorizing via signed-in user (karankundal3535@gmail.com)
+[debug] [2026-03-10T17:45:31.773Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.773Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.773Z] > refreshing access token with scopes: []
+[debug] [2026-03-10T17:45:31.775Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-10T17:45:31.775Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:31.786Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.786Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.786Z] > refreshing access token with scopes: []
+[debug] [2026-03-10T17:45:31.787Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-10T17:45:31.787Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:31.788Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-10T17:45:31.788Z] > authorizing via signed-in user (karankundal3535@gmail.com)
+[debug] [2026-03-10T17:45:31.788Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.788Z] Checked if tokens are valid: false, expires at: 1772434084695
+[debug] [2026-03-10T17:45:31.788Z] > refreshing access token with scopes: []
+[debug] [2026-03-10T17:45:31.788Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-10T17:45:31.788Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:32.175Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-03-10T17:45:32.175Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:32.203Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/mental-health-f7b7f/billingInfo [none]
+[debug] [2026-03-10T17:45:32.482Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-03-10T17:45:32.482Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:32.506Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/mental-health-f7b7f/billingInfo [none]
+[debug] [2026-03-10T17:45:32.576Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-03-10T17:45:32.577Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-10T17:45:32.585Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/mental-health-f7b7f/billingInfo [none]
+[debug] [2026-03-10T17:45:33.085Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/mental-health-f7b7f/billingInfo 403
